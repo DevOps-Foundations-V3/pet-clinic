@@ -17,13 +17,13 @@ steps:
 #    javaHomeOption: 'JDKVersion'
 #    sonarQubeRunAnalysis: false
 #    spotBugsAnalysis: false
-- task: Gradle@3
-  inputs:
-    gradleWrapperFile: 'gradlew'
-    tasks: 'build'
-    publishJUnitResults: true
-    testResultsFiles: '**/TEST-*.xml'
-    javaHomeOption: 'Path'
-    jdkDirectory: 'C:\Program Files\Java\jdk-19'
-    sonarQubeRunAnalysis: false
-    spotBugsAnalysis: false
+
+    - task: Gradle@3
+      inputs:
+        gradleWrapperFile: 'gradlew'
+        tasks: 'build'
+        publishJUnitResults: true
+        testResultsFiles: '**/TEST-*.xml'
+        javaHomeOption: 'JDKVersion'
+        sonarQubeRunAnalysis: false
+        spotBugsAnalysis: false
