@@ -6,6 +6,24 @@
 pool: 'Default'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-  
+#- script: echo Hello, world!
+#  displayName: 'Run a one-line script'
+#- task: Gradle@3
+#  inputs:
+#    gradleWrapperFile: 'gradlew'
+#    tasks: 'build'
+#    publishJUnitResults: true
+#    testResultsFiles: '**/TEST-*.xml'
+#    javaHomeOption: 'JDKVersion'
+#    sonarQubeRunAnalysis: false
+#    spotBugsAnalysis: false
+- task: Gradle@3
+  inputs:
+    gradleWrapperFile: 'gradlew'
+    tasks: 'build'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'Path'
+    jdkDirectory: 'C:\Program Files\Java\jdk-19'
+    sonarQubeRunAnalysis: false
+    spotBugsAnalysis: false
